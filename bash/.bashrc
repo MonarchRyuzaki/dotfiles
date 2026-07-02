@@ -134,3 +134,4 @@ export PATH="/home/ryuzaki/.local/bin:$PATH"
 eval "$(zoxide init bash)"
 alias tmux="tmux -u"
 alias ll="eza -l -g --header --git --icons=always --color=always"
+export EDITOR=nvim
