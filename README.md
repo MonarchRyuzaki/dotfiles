@@ -8,6 +8,7 @@ This repository contains all the configuration files for my customized terminal 
 - **kitty**: Contains Kitty terminal configuration (JetBrains Mono Nerd Font, Macchiato background)
 - **nvim**: Contains Neovim configuration based on LazyVim
 - **starship**: Contains the Starship prompt configuration
+- **yazi**: Contains Yazi terminal file manager configuration
 
 ## How to Restore on a New Machine
 
@@ -27,13 +28,13 @@ git clone https://github.com/MonarchRyuzaki/dotfiles.git ~/dotfiles
 Navigate into the folder and use `stow` to instantly map all configurations to their correct system locations:
 ```bash
 cd ~/dotfiles
-stow bash tmux kitty nvim starship
+stow bash tmux kitty nvim starship yazi
 ```
 
 4. **Install Specific Dependencies:**
 *   **Kitty**: `sudo apt install kitty`
 *   **Fonts**: Download JetBrains Mono Nerd Font to `~/.local/share/fonts` and run `fc-cache -f`
-*   **Zoxide & Eza**: Install via their respective installation scripts or apt repositories.
+*   **CLI Utilities**: Install `zoxide`, `eza`, `yazi`, `fastfetch`, `bat`, `ripgrep` (rg), `fd`, `jq`, `lazygit`, and `lazydocker` via their respective package managers.
 *   **Tmux Plugins**: Open tmux and press `Ctrl+b` then `Shift+i` to install the Catppuccin theme.
 
 Everything will instantly snap into place!
