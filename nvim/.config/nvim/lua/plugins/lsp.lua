@@ -1,6 +1,16 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
+    -- Tell all language servers to NEVER send snippets
+    capabilities = {
+      textDocument = {
+        completion = {
+          completionItem = {
+            snippetSupport = false,
+          },
+        },
+      },
+    },
     servers = {
       gopls = {
         settings = {

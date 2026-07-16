@@ -5,3 +5,9 @@ vim.opt.autowriteall = true
 
 -- Reduce mouse scrolling speed (default is ver:3, hor:6)
 vim.opt.mousescroll = "ver:1,hor:1"
+
+-- Disable normal auto-format on save (we handle it in autosave now)
+vim.g.autoformat = false
+
+-- Disable inline "virtual text" error messages, keep the red squigglies
+vim.diagnostic.config({ virtual_text = false })

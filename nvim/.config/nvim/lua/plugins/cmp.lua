@@ -5,6 +5,9 @@ return {
       preset = "default",
       ["<Tab>"] = { "select_and_accept", "fallback" },
       ["<CR>"]  = { "accept", "fallback" },
+      -- Use Shift+F1 (terminals often send this as F13) to manually show the autocomplete menu
+      ["<S-F1>"] = { "show", "show_documentation", "hide_documentation" },
+      ["<F13>"] = { "show", "show_documentation", "hide_documentation" },
     },
     sources = {
       -- Excludes 'snippets' from the default providers
@@ -21,6 +24,7 @@ return {
         window = { border = "rounded" },
       },
       menu = {
+        auto_show = false,
         border = "rounded",
       },
     },
