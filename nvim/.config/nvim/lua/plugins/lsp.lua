@@ -6,7 +6,7 @@ return {
       textDocument = {
         completion = {
           completionItem = {
-            snippetSupport = false,
+            snippetSupport = true,
           },
         },
       },
@@ -25,7 +25,7 @@ return {
           ["rust-analyzer"] = {
             completion = {
               callable = {
-                snippets = "none",
+                snippets = "add_parantheses",
               },
             },
           },

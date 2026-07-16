@@ -22,3 +22,12 @@ map("i", "<A-Down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
 map("i", "<A-Up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
 map("v", "<A-Down>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 map("v", "<A-Up>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+
+map("i", ";", function()
+  -- If the character immediately to the right is already a semicolon, step over it
+  if vim.api.nvim_get_current_line():sub(vim.fn.col("."), vim.fn.col(".")) == ";" then
+    return "<Right>"
+  end
+  -- Otherwise, insert a normal semicolon
+  return ";"
+end, { expr = true, silent = true })
