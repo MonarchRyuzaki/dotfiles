@@ -136,3 +136,6 @@ alias tmux="tmux -u"
 alias ll="eza -l -g --header --git --icons=always --color=always"
 export EDITOR=nvim
 . "$HOME/.cargo/env"
+export AGY_CLI_DISABLE_AUTO_UPDATE=true
+alias rollback_agy='tar -xvzf ~/Downloads/agy_cli_linux_x64.tar.gz -C /tmp && mv /tmp/antigravity ~/.local/bin/agy'
+
