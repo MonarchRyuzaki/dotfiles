@@ -139,3 +139,6 @@ export EDITOR=nvim
 export AGY_CLI_DISABLE_AUTO_UPDATE=true
 alias rollback_agy='tar -xvzf ~/Downloads/agy_cli_linux_x64.tar.gz -C /tmp && mv /tmp/antigravity ~/.local/bin/agy'
 
+
+# localpod autocompletion
+source /home/ryuzaki/.localpod_completion.bash
