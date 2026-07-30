@@ -139,6 +139,12 @@ export EDITOR=nvim
 export AGY_CLI_DISABLE_AUTO_UPDATE=true
 alias rollback_agy='tar -xvzf ~/Downloads/agy_cli_linux_x64.tar.gz -C /tmp && mv /tmp/antigravity ~/.local/bin/agy'
 
+export http_proxy="http://192.168.49.1:8000"
+export https_proxy="http://192.168.49.1:8000"
+export HTTP_PROXY="http://192.168.49.1:8000"
+export HTTPS_PROXY="http://192.168.49.1:8000"
+export no_proxy="localhost,127.0.0.1"
+export NO_PROXY="localhost,127.0.0.1"
 
 # localpod autocompletion
 source /home/ryuzaki/.localpod_completion.bash
