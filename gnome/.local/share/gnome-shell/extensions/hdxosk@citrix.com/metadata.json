@@ -1,0 +1,8 @@
+{
+    "uuid": "hdxosk@citrix.com",
+    "name": "Citrix On-screen Keyboard Extension",
+    "description": "An extension to get the visibility of the on-screen keyboard. (Pre Gnome 45)",
+    "version": 1,
+    "shell-version": ["3.36","3.38","40","41","42","43","44"],
+    "url": ""
+}
