@@ -10,6 +10,7 @@ This repository contains all the configuration files for my customized terminal 
 - **starship**: Contains the Starship prompt configuration
 - **yazi**: Contains Yazi terminal file manager configuration
 - **gnome**: Contains OS themes, icons, GNOME extensions, and `dconf` desktop settings.
+- **playwright**: Contains Brave launcher profile wrapper and Playwright MCP configuration
 
 ## How to Restore on a New Machine
 
@@ -29,7 +30,7 @@ git clone https://github.com/MonarchRyuzaki/dotfiles.git ~/dotfiles
 Navigate into the folder and use `stow` to instantly map all configurations to their correct system locations:
 ```bash
 cd ~/dotfiles
-stow bash tmux kitty nvim starship yazi gnome
+stow bash tmux kitty nvim starship yazi gnome playwright
 ```
 
 4. **Install Specific Dependencies:**

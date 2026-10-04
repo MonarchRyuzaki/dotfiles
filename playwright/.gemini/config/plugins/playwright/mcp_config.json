@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@executeautomation/playwright-mcp-server"
+      ],
+      "env": {
+        "CHROME_EXECUTABLE_PATH": "/home/ryuzaki/.config/brave-playwright-profile/brave-launcher.sh"
+      }
+    }
+  }
+}
