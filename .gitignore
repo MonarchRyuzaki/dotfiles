@@ -1,0 +1,4 @@
+# Never track secrets
+.secrets
+secrets.yaml
+*.lock

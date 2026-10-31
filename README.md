@@ -11,6 +11,8 @@ This repository contains all the configuration files for my customized terminal 
 - **yazi**: Contains Yazi terminal file manager configuration
 - **gnome**: Contains OS themes, icons, GNOME extensions, and `dconf` desktop settings.
 - **playwright**: Contains Brave launcher profile wrapper and Playwright MCP configuration
+- **vscode**: Contains VS Code settings (`settings.json`), keybindings, and custom language snippets
+- **goose**: Contains Goose AI agent configuration with MCP extensions (sanitized with env vars)
 
 ## How to Restore on a New Machine
 
@@ -30,7 +32,7 @@ git clone https://github.com/MonarchRyuzaki/dotfiles.git ~/dotfiles
 Navigate into the folder and use `stow` to instantly map all configurations to their correct system locations:
 ```bash
 cd ~/dotfiles
-stow bash tmux kitty nvim starship yazi gnome playwright
+stow bash tmux kitty nvim starship yazi gnome playwright vscode goose
 ```
 
 4. **Install Specific Dependencies:**

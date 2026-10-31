@@ -148,3 +148,8 @@ alias rollback_agy='tar -xvzf ~/Downloads/agy_cli_linux_x64.tar.gz -C /tmp && mv
 
 # localpod autocompletion
 source /home/ryuzaki/.localpod_completion.bash
+
+# Load local secrets if present
+if [ -f "$HOME/.secrets" ]; then
+    . "$HOME/.secrets"
+fi

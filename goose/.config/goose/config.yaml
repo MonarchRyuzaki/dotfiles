@@ -1,0 +1,137 @@
+GOOSE_TELEMETRY_ENABLED: false
+extensions:
+  summarize:
+    enabled: false
+    type: platform
+    name: summarize
+    description: Load files/directories and get an LLM summary in a single call
+    display_name: Summarize
+    bundled: true
+  code_execution:
+    enabled: false
+    type: platform
+    name: code_execution
+    description: Goose will make extension calls through code execution, saving tokens
+    display_name: Code Mode
+    bundled: true
+  extensionmanager:
+    enabled: true
+    type: platform
+    name: Extension Manager
+    description: Enable extension management tools for discovering, enabling, and disabling extensions
+    display_name: Extension Manager
+    bundled: true
+  summon:
+    enabled: true
+    type: platform
+    name: summon
+    description: Load knowledge and delegate tasks to subagents
+    display_name: Summon
+    bundled: true
+  tom:
+    enabled: true
+    type: platform
+    name: tom
+    description: Inject custom context into every turn via GOOSE_MOIM_MESSAGE_TEXT and GOOSE_MOIM_MESSAGE_FILE environment variables
+    display_name: Top Of Mind
+    bundled: true
+  skills:
+    enabled: true
+    type: platform
+    name: skills
+    description: Discover and provide skill instructions from filesystem and builtins
+    display_name: Skills
+    bundled: true
+  todo:
+    enabled: false
+    type: platform
+    name: todo
+    description: Enable a todo list for goose so it can keep track of what it is doing
+    display_name: Todo
+    bundled: true
+  developer:
+    enabled: true
+    type: platform
+    name: developer
+    description: Write and edit files, and execute shell commands
+    display_name: Developer
+    bundled: true
+  analyze:
+    enabled: true
+    type: platform
+    name: analyze
+    description: 'Analyze code structure with tree-sitter: directory overviews, file details, symbol call graphs'
+    display_name: Analyze
+    bundled: true
+  apps:
+    enabled: true
+    type: platform
+    name: apps
+    description: Create and manage custom Goose apps through chat. Apps are HTML/CSS/JavaScript and run in sandboxed windows.
+    display_name: Apps
+    bundled: true
+  scheduler:
+    enabled: true
+    type: platform
+    name: scheduler
+    description: Create and manage scheduled recipe execution
+    display_name: Scheduler
+    bundled: true
+  chatrecall:
+    enabled: false
+    type: platform
+    name: chatrecall
+    description: Search past conversations and load session summaries for contextual memory
+    display_name: Chat Recall
+    bundled: true
+  github:
+    name: "GitHub Copilot"
+    type: streamable_http
+    uri: "https://api.githubcopilot.com/mcp/"
+    headers:
+      Authorization: "Bearer ${GITHUB_COPILOT_TOKEN}"
+    enabled: true
+    timeout: 300
+  notion:
+    name: "Notion"
+    type: stdio
+    cmd: "npx"
+    args:
+      - "-y"
+      - "@notionhq/notion-mcp-server"
+    envs:
+      OPENAPI_MCP_HEADERS: '{"Authorization": "Bearer ${NOTION_TOKEN}", "Notion-Version": "2022-06-28"}'
+    enabled: true
+    timeout: 300
+  playwright:
+    name: "Playwright"
+    type: stdio
+    cmd: "npx"
+    args:
+      - "-y"
+      - "@executeautomation/playwright-mcp-server"
+    envs:
+      CHROME_EXECUTABLE_PATH: "/home/ryuzaki/.config/brave-playwright-profile/brave-launcher.sh"
+    enabled: true
+    timeout: 300
+  tickertape:
+    name: "Tickertape"
+    type: stdio
+    cmd: "/home/ryuzaki/.nvm/versions/node/v24.15.0/bin/node"
+    args:
+      - "/home/ryuzaki/.gemini/config/plugins/tickertape/mcp-server/dist/index.js"
+    enabled: true
+    timeout: 300
+active_provider: ollama
+providers:
+  openrouter:
+    enabled: true
+    model: anthropic/claude-sonnet-5.5
+    configured: true
+  ollama:
+    enabled: true
+    model: ministral-3:8b
+    configured: true
+GOOSE_MODE: smart_approve
+OLLAMA_HOST: http://localhost:11434
+OLLAMA_TIMEOUT: '600'
